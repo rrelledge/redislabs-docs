@@ -38,10 +38,10 @@ steps:
     - For a new bucket:
         1. Click **Create Bucket**.
         1. Enter a name and region for the bucket and click **Next**.
-        1. Set the bucket properties that are required by your company standards, and click **Next**.
-        1. Set Public access properties according to your company standards, and click **Next**.
-        1. Review the properties, and click **Create bucket**.
-        1. Find your bucket in the bucket list, and click on the bucket name.
+        1. Set the bucket properties that are required by your company standards and click **Next**.
+        1. Set Public access properties according to your company standards and click **Next**.
+        1. Review the properties and click **Create bucket**.
+        1. Find your bucket in the bucket list and click on the bucket name.
         1. In **Permissions > Access Control**, click **Add account**:
             1. In the Account field enter:
                 `fd1b05415aa5ea3a310265ddb13b156c7c76260dbc87e037a8fc290c3c86b614`
@@ -65,7 +65,7 @@ console](https://developers.google.com/console/) subscriptions, store your backu
 
 1. Sign in to Google Cloud Platform console.
 
-1. In the admin console menu, locate the _Storage_ section than select **Cloud Storage&nbsp;>&nbsp;Browser**.
+1. In the admin console menu, locate the _Storage_ section then select **Cloud Storage&nbsp;>&nbsp;Browser**.
 
 1. Create or select a bucket.
 

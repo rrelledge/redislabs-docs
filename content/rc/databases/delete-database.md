@@ -9,7 +9,7 @@ aliases: /rc/administration/setup-and-editing/delete-databases/
 ---
 Deleting a database is just as easy as creating one.
 Make sure that you are truly done with the database,
-because after you delete the database it cannot be recovered (except from your backups).
+because after you delete the database, it cannot be recovered (except from your backups).
 
 {{< note >}}
 - Only users that are defined as Owners on the Redis Cloud account can delete a database.
@@ -26,4 +26,4 @@ because after you delete the database it cannot be recovered (except from your b
 
 1. Confirm your choice.
 
-The database and all of its data and configurations is now deleted.
+The database and all of its data and configurations are now deleted.

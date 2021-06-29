@@ -1,5 +1,5 @@
 ---
-Title: Clustering Redis Databases
+Title: Clustering Redis databases
 description:
 weight: $weight
 alwaysopen: false
@@ -9,7 +9,7 @@ aliases: /rc/concepts/clustering-redis-cloud/
 ---
 Redis is mostly a single-threaded process. This enables Redis to be high performance and simple (no need for threads synchronization).
 To let you take advantage of Redis clustering,
-Redis Cloud uses our Redis Enterprise technology to scale Redis databases for you.
+Redis Enterprise Cloud uses our Redis Enterprise technology to scale Redis databases for you.
 
 For example:
 
@@ -18,11 +18,11 @@ For example:
 - The operations performed against the database are CPU intensive enough to degrade performance.
     With clustering, you can distribute operational load across the same server or multiple servers.
 
-A Redis Cloud cluster is a set of managed Redis processes and cloud instances,
+A Redis Enterprise Cloud cluster is a set of managed Redis processes and cloud instances,
 with each process managing a subset of the database keyspace.
-Clustering uses multiple cores and resources of multiple instance to overcome scaling challenges.
+Clustering uses multiple cores and resources of multiple instances to overcome scaling challenges.
 
-In a Redis Cloud cluster, the keyspace is partitioned into hash
+In a Redis Enterprise Cloud cluster, the keyspace is partitioned into hash
 slots. At any given time a slot resides on and is managed by a single
 Redis server. An instance that belongs to a cluster can manage multiple
 slots. This division of the key space, shown as sharding, is achieved by
@@ -30,14 +30,14 @@ hashing the keys' names, or parts of these (key hash tags), in order to
 obtain the slot in which a key should reside.
 
 Even while employing multiple Redis processes, the use of a Redis
-Cloud cluster is nearly transparent to the application that
+Enterprise Cloud cluster is nearly transparent to the application that
 uses it. The cluster is accessible via a single endpoint that
 automatically routes all operations to the relevant shards, without the
 complexity of a cluster-aware Redis client. This allows applications to
 benefit from using the cluster without performing any code changes, even
 if they were not designed to use it beforehand.
 
-When creating or editing a Redis database on Redis Cloud, the
+When creating or editing a Redis database on Redis Enterprise Cloud, the
 system automatically calculates the number of shards needed based on
 the database memory limit and required throughput.
 
@@ -51,7 +51,7 @@ For Redis Cloud Essentials, clustering is only available in the
 
 ## Multi-key operations {#multikey-operations}
 
-Operations on multiple keys in a sharded Redis Cloud cluster
+Operations on multiple keys in a sharded Redis Enterprise Cloud cluster
 are supported with the following limitations:
 
 1. **Multi-key commands:** Redis offers several commands that accept
@@ -72,12 +72,12 @@ are supported with the following limitations:
     allowed only when both the key's original name and its new name are
     mapped to the same hash slot.
 1. **Variadic commands**: The use of (MGET, MSET, HMGET, HMSET, etc..)
-    and pipelining are supported with Redis Cloud cluster
+    and pipelining are supported with Redis Enterprise Cloud cluster
     like if it were a non-cluster DB.
 
 ## Changing the hashing policy
 
-The clustering configuration of a Redis Cloud instance can be
+The clustering configuration of a Redis Enterprise Cloud instance can be
 changed. However, hashing policy changes trigger the deletion
 (i.e. FLUSHDB) of the data before they can be applied. These changes
 are:
@@ -90,7 +90,7 @@ are:
 
 ### Standard hashing policy
 
-When using the standard hashing policy, a Redis Cloud cluster
+When using the standard hashing policy, a Redis Enterprise Cloud cluster
 behaves like the standard, open-source Redis cluster, and hashing is
 performed as follows:
 
@@ -112,10 +112,10 @@ need to construct key names with hashtags.
 
 ### Custom hashing policy
 
-A Redis Cloud  cluster can be configured to use a custom hashing
+A Redis Enterprise Cloud  cluster can be configured to use a custom hashing
 policy. A custom hashing policy is required when different keys need to
 be kept together on the same shard to allow multi-key operations. Redis
-Cloud's custom hashing policy is provided via a set of Perl
+Enterprise Cloud's custom hashing policy is provided via a set of Perl
 Compatible Regular Expressions (PCRE) rules that describe the dataset's
 key name patterns.
 
@@ -125,7 +125,7 @@ which hashing will be done. The hashing tag is denoted in the RegEx by
 the use of the \`tag\` named subpattern. Different keys that have the
 same hashtag will be stored and managed in the same slot.
 
-Once you enable the custom hashing policy, the Redis Cloud's
+Once you enable the custom hashing policy, the Redis Enterprise Cloud's
 default RegEx rules that implement the standard hashing policy are:
 
 | RegEx Rule | Description |
