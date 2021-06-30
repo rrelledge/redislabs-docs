@@ -1,16 +1,16 @@
 ---
-Title: Account and Team Settings
+Title: Account and team settings
 description:
 weight: 40
 alwaysopen: false
 categories: ["RC"]
 aliases: /rv/administration/account-team-settings/
 ---
-On this page you can view settings for your Redis Cloud account and team.
+On this page you can view settings for your Redis Enterprise Cloud account and team.
 You can also:
 
 - Add or edit your VAT ID
-- Change the account Time Zone
+- Change the account time zone
 - Add a new Relic license key
 - Configure Multi-Factor Authentication (MFA)
 
@@ -22,7 +22,7 @@ you must enter the downloadable Redis Labs CA Certificate from this page.
 ## Team management
 
 To manage the team of people who have access to the account, click on
-the "Team" tab and you will be presented with the current list of team
+the "Team" tab, and you will be presented with the current list of team
 members on this account.
 
 - To add more team members, click ![Add](/images/rs/icon_add.png#no-click "Add").
@@ -37,12 +37,12 @@ Team members can have different roles to the account:
 ### Team management for GCP Marketplace customers
 
 If you subscribed to Redis Enterprise Cloud using GCP Marketplace, you can manage your team from the IAM section of the GCP console.
-To grant Redis Cloud access to a GCP user, assign one of these roles to the user:
+To grant Redis Enterprise Cloud access to a GCP user, assign one of these roles to the user:
 
 - **Viewer** - serviceusage.serviceUsageViewer and redisenterprisecloud.viewer
 - **Owner** - serviceusage.serviceUsageViewer and redisenterprisecloud.admin
 
-Users must log in using SSO to Redis Cloud at least once for them to be added to the team.
+Users must log in using SSO to Redis Enterprise Cloud at least once for them to be added to the team.
 
 ## Multi-Factor Authentication (MFA)
 
@@ -58,14 +58,14 @@ The default MFA configuration sends an authentication code by text message to en
 
 To configure MFA for your user account:
 
-1. Log into your account.
+1. Log in to your account.
 2. In the menu, click on your name.
 3. In your user profile, click **Multi-Factor Authentication**.
 4. Click **Activate Now**
 5. Enter your mobile phone number and enter the confirmation code sent to you by text message.
 
 Your account is now configured for MFA.
-When you log in to the Redis Cloud admin console, you are sent an authentication code by text message.
+When you log in to the Redis Enterprise Cloud admin console, you are sent an authentication code by text message.
 
 To change the mobile phone number, select **Configure** for the text message code and enter the new mobile phone number.
 
@@ -85,13 +85,13 @@ To configure MFA for the Authenticator app:
 
 1. Install the Google Authenticator app on your phone from the Apple Store or Google Play.
 1. Add Redis Enterprise Cloud to the app:
-    1. In your profile in your Redis Cloud account, click **Multi-Factor Authentication**.
+    1. In your profile in your Redis Enterprise Cloud account, click **Multi-Factor Authentication**.
     1. Select **Configure** for the authenticator app.
     1. On your phone, open the Authenticator app.
     1. Select the plus sign and press **Scan a barcode**.
-    1. Scan the Redis Cloud barcode.
+    1. Scan the Redis Enterprise Cloud barcode.
 
-To log in to the Redis Cloud admin console, you can do MFA either with a text message or the Authenticator app.
+To log in to the Redis Enterprise Cloud admin console, you can do MFA either with a text message or the Authenticator app.
 If you use with the Authenticator app, you must open the Authenticator app and enter the Redis Labs code into the Redis Enterprise Cloud login.
 
 #### Deactivating MFA

@@ -1,5 +1,5 @@
 ---
-Title: Changing Redis Cloud Plans
+Title: Changing Redis Enterprise Cloud plans
 description:
 weight: $weight
 alwaysopen: false
@@ -11,9 +11,9 @@ You can change your subscription plan at any time.
 
 To do so:
 
-1. From the Redis Cloud menu, choose **Subscriptions**.  
+1. From the Redis Enterprise Cloud menu, choose **Subscriptions**.  
 
-    ![Select **Subscriptions** from the Redis Cloud menu](/images/rc/subscription-menu-select.png)
+    ![Select **Subscriptions** from the Redis Enterprise Cloud menu](/images/rc/subscription-menu-select.png)
 
 1.  Select the subscription you want to change.
 
@@ -24,7 +24,7 @@ To do so:
     ![The **Change Subscription** button appears below the list of subscriptions.](/images/rc/subscription-change-button.png)
 
 
-1.  The first option you can change is type, which indicates whether the plan supports replication or data-persistence.  
+1.  The first option you can change is type, which indicates whether the plan supports replication or data persistence.  
 
     Your current selection is highlighted.
 
@@ -42,7 +42,7 @@ To do so:
 
 ## Troubleshooting
 
-1.  Before updating to a plan with a smaller memory size, verify that your data fits the new size.  Otherwise, the update process will fail and the plan will remain at the original size.
+1.  Before updating to a plan with a smaller memory size, verify that your data fits the new size.  Otherwise, the update process will fail, and the plan will remain at the original size.
 
 1.  Subscription updates happen in the background.  Changes may take several minutes to complete.  
 
