@@ -7,11 +7,11 @@ categories: ["RC"]
 aliases: /rc/administration/security/data-access-control
 ---
 
-All Redis Cloud databases require either [password-based authentication](#password-based-authentication) or
+All Redis Enterprise Cloud databases require either [password-based authentication](#password-based-authentication) or
 [role-based access control](#role-based-access-control). Role-based access control allows you to define multiple
 users with fine-grained authorization features.
 
-To use role-based access control, you need a Redis Cloud database supporting version 6.0.0 and above. You
+To use role-based access control, you need a Redis Enterprise Cloud database supporting version 6.0.0 and above. You
 can check your database's Redis version by navigating to the **View Database** screen...
 
 ![View Database](/images/rc/view-database-extended.png "View Database")
@@ -22,7 +22,7 @@ can check your database's Redis version by navigating to the **View Database** s
 
 ## Password-based authentication {#password-based-authentication}
 
-Password-based authentication is a basic but essential Redis security feature. When you create a Redis Cloud database,
+Password-based authentication is a basic but essential Redis security feature. When you create a Redis Enterprise Cloud database,
 your database is given a randomly generated password. You can see this password on the **View Database** screen.
 
 ![Default User Password](/images/rc/default-user-password.png "Default User Password")
@@ -74,7 +74,7 @@ There are three tabs on this screen: **Users**, **Roles**, and **Redis ACLs**.
 
 In the **Redis ACLs** tab, you define named *permissions* for specific Redis commands and keys.
 
-In the **Roles** tab, you create roles. Each role consists of a set of permissions for one or more Redis Cloud databases.
+In the **Roles** tab, you create roles. Each role consists of a set of permissions for one or more Redis Enterprise Cloud databases.
 
 Finally, in the **Users** tab, you create users, and you assign each user a role.
 
@@ -84,14 +84,14 @@ In open source Redis, you can create users and assign ACLs to them using the `AC
 Redis does not support generic roles.
 
 In Redis Enterprise Cloud, you configure RBAC using the admin console. As a result, certain open source Redis ACL
-subcommands are not available in Redis Cloud.
+subcommands are not available in Redis Enterprise Cloud.
 
-Specifically, Redis Cloud databases block the following ACL subcommands: `LOAD`, `SAVE`, `SETUSER`, `DELUSER`, `GENPASS`, and `LOG`.
+Specifically, Redis Enterprise Cloud databases block the following ACL subcommands: `LOAD`, `SAVE`, `SETUSER`, `DELUSER`, `GENPASS`, and `LOG`.
 
-Redis Cloud databases allow these ACL subcommands: `LIST`, `USERS`, `GETUSER`, `CAT`, `WHOAMI`, and `HELP`.
+Redis Enterprise Cloud databases allow these ACL subcommands: `LIST`, `USERS`, `GETUSER`, `CAT`, `WHOAMI`, and `HELP`.
 
 In open source Redis, you must explicitly provide access to the `MULTI`, `EXEC`, and `DISCARD` commands.
-In Redis Cloud, these commands, which are used in transactions, are always permitted. However, the commands
+In Redis Enterprise Cloud, these commands, which are used in transactions, are always permitted. However, the commands
 run within the transaction block are subject to RBAC permissions.
 
 When you run multi-key commands on multi-slot keys, the return value is `failure` but the command runs on the keys that are allowed.
@@ -150,9 +150,9 @@ The Redis ACL syntax emphasizes brevity:
 - `@` indicates a command category
 - `~` defines a permitted key pattern
 
-#### Pre-defined permissions
+#### Predefined permissions
 
-Redis Cloud includes three, pre-defined permissions:
+Redis Enterprise Cloud includes three, predefined permissions:
 
 - Full Access (`+@all ~*`) - All commands are allowed for all keys
 - Not Dangerous (`+@all -@dangerous ~*`) - All commands except for the "dangerous" command category are allowed for all keys
@@ -199,7 +199,7 @@ To assign Redis ACLs to a data access role:
     - Edit a Redis ACL association - Hover over a Redis ACL assignment and click ![Edit](/images/rc/icon_edit.png#no-click "Edit").
     - Create a Redis ACL association - Click ![Add](/images/rc/icon_add.png#no-click "Add").
 1. Select the databases that the Redis ACL applies to.
-1. Select the [Redis ACL](#configuring-redis-acls) that define the access to commands and keys.
+1. Select the [Redis ACL](#configuring-redis-acls) that defines the access to commands and keys.
 1. Click ![Save](/images/rc/icon_save.png#no-click "Save").
 
     You can click ![Add](/images/rc/icon_add.png#no-click "Add") to assign a Redis ACL to another database.

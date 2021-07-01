@@ -5,11 +5,11 @@ weight: 40
 alwaysopen: false
 categories: ["RC"]
 ---
-Redis Cloud databases write their data to disk whenever [persistence]({{<relref "/rc/concepts/data-persistence.md">}}) is enabled. 
+Redis Enterprise Cloud databases write their data to disk whenever [persistence]({{<relref "/rc/concepts/data-persistence.md">}}) is enabled. 
 
-On [Google Cloud Platform](#gcp) (GCP) and [Microsoft Azure](#azure), Redis Cloud deployments are always encrypted at rest. 
+On [Google Cloud Platform](#gcp) (GCP) and [Microsoft Azure](#azure), Redis Enterprise Cloud deployments are always encrypted at rest. 
 
-For [Amazon Web Services](#aws) (AWS), Redis Cloud Flexible (and Annual) subscriptions can be encrypted at rest when you create the subscription.  
+For [Amazon Web Services](#aws) (AWS), Redis Enterprise Cloud Flexible (and Annual) subscriptions can be encrypted at rest when you create the subscription.  
 
 ## Encryption at rest on AWS {#aws}
 
@@ -43,14 +43,14 @@ When you create the subscription, all databases will be encrypted at rest.
 
 ## Disk encryption on GCP {#gcp}
 
-All data written to disk on GCP-based Redis Cloud deployments is encrypted by default. When deploying
-a Redis Cloud database on GCP, you don't need to take any actions to enable this encryption.
+All data written to disk on GCP-based Redis Enterprise Cloud deployments is encrypted by default. When deploying
+a Redis Enterprise Cloud database on GCP, you don't need to take any actions to enable this encryption.
 
 To learn more, see the [GCP encryption at rest documentation](https://cloud.google.com/security/encryption-at-rest).
 
 ## Disk encryption on Azure {#azure}
 
-All data written to disk on Azure-based Redis Cloud deployments is encrypted by default. When deploying
-a Redis Cloud database on Azure, you don't need to take any actions to enable this encryption.
+All data written to disk on Azure-based Redis Enterprise Cloud deployments is encrypted by default. When deploying
+a Redis Enterprise Cloud database on Azure, you don't need to take any actions to enable this encryption.
 
 To learn more, see the [Azure encryption at rest documentation](https://docs.microsoft.com/en-us/azure/security/fundamentals/encryption-atrest).

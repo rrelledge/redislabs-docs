@@ -9,19 +9,19 @@ aliases: /rc/administration/security/securing-redis-cloud-connections
 
 Transport Layer Security (TLS) uses encryption to secure [network communication](https://en.wikipedia.org/wiki/Transport_Layer_Security).  
 
-Redis Cloud Flexible and Annual subscriptions can use TLS to encrypt data communications between applications and Redis databases.
+Redis Enterprise Cloud Flexible and Annual subscriptions can use TLS to encrypt data communications between applications and Redis databases.
 
-## Use TLS with Redis Cloud
+## Use TLS with Redis Enterprise Cloud
 
 TLS is not enabled by default.  
 
 When you enable TLS, you also need to decide whether to enable client authentication, which requires that all database clients present a valid client certificate for authentication.
 
-Client authentication is not required by Redis Cloud; however, it is strongly recommended.
+Client authentication is not required by Redis Enterprise Cloud; however, it is strongly recommended.
 
 ### Enable TLS
 
-To enable TLS for a Redis Cloud database.
+To enable TLS for a Redis Enterprise Cloud database.
 
 1. Select the **Databases** command from the admin console menu to open the **View Databases** screen and then select your database from the list.
 
@@ -48,7 +48,7 @@ enabling client authentication, only those clients that present a valid certific
 7. If you generate your certificate using the admin console, then a download will begin containing the following artifacts:
    * `redislabs_user.crt` – the certificate's public key.
    * `redislabs_user_private.key` – the certificate's private key.
-   * `redislabs_ca.pem` – the Redis Cloud CA certificate.
+   * `redislabs_ca.pem` – the Redis Enterprise Cloud CA certificate.
 
 8. Select the **Update** button to apply your changes and enable TLS.
 
@@ -62,14 +62,14 @@ will no longer be permitted.
 
 ## Connect over TLS
 
-To connect to a Redis Cloud database over TLS, you will need:
+To connect to a Redis Enterprise Cloud database over TLS, you will need:
 
 * A Redis client that supports TLS
-* The Redis Cloud CA certificate
+* The Redis Enterprise Cloud CA certificate
 
 ### Certificates
 
-If you don't have the Redis Cloud CA certificate, you can download it from the admin
+If you don't have the Redis Enterprise Cloud CA certificate, you can download it from the admin
 console by going to **Settings** and selecting the **Flexible Plans CA** button.
 
 ![Flexible Plans CA button](/images/rc/rc-settings-ca-flexible.png "Flexible Plans CA")
@@ -79,9 +79,9 @@ If you're requiring client authentication, you'll also need public and private c
 
 ### Connect with the Redis CLI
 
-Here's how to use the Redis CLI to connect to a TLS-enabled Redis Cloud database:
+Here's how to use the Redis CLI to connect to a TLS-enabled Redis Enterprise Cloud database:
 
-If you're not requiring client authentication, then you need to provide the host, port, and the Redis Cloud CA certificate:
+If you're not requiring client authentication, then you need to provide the host, port, and the Redis Enterprise Cloud CA certificate:
 
 ```sh
 redis-cli -h redis.123.cloud.rlrcp.com -p 16257 --tls

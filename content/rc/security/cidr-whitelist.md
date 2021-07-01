@@ -9,10 +9,10 @@ aliases:
 
 ### CIDR Whitelist
 
-If you are deploying Redis Cloud on your own infrastructure, you can configure your deployment to permit traffic between a specific set of IP addresses.  The list of allowed addresses is called the _CIDR Whitelist_.
+If you are deploying Redis Enterprise Cloud on your own infrastructure, you can configure your deployment to permit traffic between a specific set of IP addresses.  The list of allowed addresses is called the _CIDR Whitelist_.
 
 The CIDR whitelist defines a range of IP addresses and AWS security groups that control inbound
-and outbound traffic to the Redis Cloud VPC. When you manage the CIDR whitelist with security groups you
+and outbound traffic to the Redis Enterprise Cloud VPC. When you manage the CIDR whitelist with security groups, you
 can easily use the same security groups to manage access to your application.
 
 To define the CIDR whitelist:
